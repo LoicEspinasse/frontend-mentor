@@ -1,0 +1,99 @@
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #0d192b;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: #14253d;
+  color: white;
+  overflow: hidden;
+  max-width: 320px;
+  padding: 1.5rem;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+}
+.card > a {
+  text-decoration: none;
+  text-transform: none;
+}
+.card__image {
+  height: 20rem;
+  background-image: url("../images/image-equilibrium.jpg");
+  background-size: cover;
+  background-position: center center;
+  border-radius: 0.5rem;
+}
+.card__title {
+  font-weight: 600;
+  font-size: 22px;
+  margin-top: 2rem;
+}
+.card__description {
+  font-size: 18px;
+  line-height: 25px;
+  color: #8bacda;
+}
+.card__element {
+  display: flex;
+  justify-content: space-between;
+}
+.card__element_eth {
+  color: #00fff7;
+  display: flex;
+  align-items: center;
+}
+.card__element_eth > svg {
+  margin-right: 0.5rem;
+}
+.card__element_date {
+  color: #8bacda;
+  display: flex;
+  align-items: center;
+}
+.card__element_date > svg {
+  margin-right: 0.5rem;
+}
+.card hr.card__divider {
+  border: 0.1px solid #2f415b;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.card__author {
+  display: flex;
+  align-items: center;
+}
+.card__author_image {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-image: url("../../front/images/image-avatar.png");
+  background-size: cover;
+  border: 1px solid white;
+}
+.card__author_name {
+  margin-left: 1rem;
+  color: #8bacda;
+}
+.card__author_name > span {
+  color: white;
+}
+
+.pagination {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-color: yellow;
+}
+.pagination--right {
+  margin-left: 10%;
+}
+s .pagination--left {
+  margin-right: 10%;
+}
+
+/*# sourceMappingURL=style.css.map */

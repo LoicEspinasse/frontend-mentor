@@ -1,0 +1,102 @@
+.card {
+    background-color: hsl(216, 50%, 16%);
+    color: white;
+    overflow: hidden;
+    max-width: 320px;
+    padding: 1.5rem;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+
+    & > a {
+        text-decoration: none;
+        text-transform: none;
+    }
+
+    &__image {
+        height: 20rem;
+        background-image: url("../images/image-equilibrium.jpg");
+        background-size: cover;
+        background-position: center center;
+        border-radius: 0.5rem;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 22px;
+        margin-top: 2rem;
+    }
+
+    &__description {
+        font-size: 18px;
+        line-height: 25px;
+        color: hsl(215, 51%, 70%);
+    }
+
+    &__element {
+        display: flex;
+        justify-content: space-between;
+
+        &_eth {
+            color: hsl(178, 100%, 50%);
+            display: flex;
+            align-items: center;
+
+            & > svg {
+                margin-right: 0.5rem;
+            }
+        }
+
+        &_date {
+            color: hsl(215, 51%, 70%);
+            display: flex;
+            align-items: center;
+
+            & > svg {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+
+    hr.card__divider {
+        border: 0.1px solid hsl(215, 32%, 27%);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+
+        &_image {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            background-image: url("../../front/images/image-avatar.png");
+            background-size: cover;
+            border: 1px solid white;
+        }
+
+        &_name {
+            margin-left: 1rem;
+            color: hsl(215, 51%, 70%);
+
+            & > span {
+                color: white;
+            }
+        }
+    }
+}
+
+.pagination {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-color: yellow;
+
+    &--right {
+        margin-left: 10%;
+    }
+    s &--left {
+        margin-right: 10%;
+    }
+}
