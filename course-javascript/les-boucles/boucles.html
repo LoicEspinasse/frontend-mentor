@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        var i = 0
+
+        /* Boucles Tant que */
+        while (i < 11) {
+            console.log(i)
+            /* On peut arrêter une boucle avec un Break */
+            if (i == 3) {
+                break
+            }
+            i++
+        }
+
+        /* Boucles Pour */
+        for (var j = 0; j < 11; j++) {
+            console.log(j)
+        }
+
+        var eleves = ['Jean', 'Marc', 'Marion']
+
+        console.log('Bonjour ' + eleves[0])
+
+        for (var i = 0; i < eleves.length; i++) {
+            console.log('Bonjour ' + eleves[i])
+        }
+
+        /* Exemple  avec les nombres premier */
+        var nombre = 71
+        var estPremier = true
+
+        for (var i = 2; i < nombre; i++) {
+            if (nombre % i === 0) {
+                estPremier = false
+                console.log('Ce nombre n\'est pas premier')
+                console.log(nombre + ' est divisible par ' + i)
+                console.log('Le résultat est ' + nombre / i)
+                break
+            }
+        }
+
+        if (estPremier) {
+            console.log(nombre + ' est premier')
+        }
+
+        // Exemple avec tableau éléves
+        var eleves = [{
+            nom: 'Marc',
+            moyenne: 15
+        }, {
+            nom: 'Marion',
+            moyenne: 8
+        }, {
+            nom: 'Antoine',
+            moyenne: 4,
+        }]
+
+        //console.log(eleves[0].nom)
+
+        for (var i = 0; i < eleves.length; i++) {
+            if (eleves[i].moyenne < 10) {
+                console.log(eleves[i].nom + " n'a pas la moyenne")
+            } else {
+                console.log(eleves[i].nom + " à la moyenne")
+            }
+        }
+
+
+    </script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
