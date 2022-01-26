@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Javascript-->
+    <script>
+        var marc = {
+            nom: 'Marc',
+            age: 25,
+            moyenne: 15
+        }
+
+        /* Premiere condition */
+        if (marc.age >= 18) {
+            console.log("Tu peux passer ton permis!")
+        } else if (marc.age >= 15) {
+            console.log("Conduite accompagnée")
+        } else {
+            console.log("Tu ne peux pas conduire")
+        }
+
+        /* Seconde condition */
+        if (marc.age >= 18 && marc.age <= 25) {
+            console.log("Tu as le droit au tarif jeune")
+        } else {
+            console.log("Vous n'avez pas accès aux réductions")
+        }
+
+        /* Switch case */
+        switch (marc.age) {
+            case 18:
+                console.log("Bravo tu as 18 ans")
+                break
+            case 25:
+                console.log("Bravo tu as 25 ans")
+                break
+        }
+
+        /* Syntaxe raccourci */
+
+        console.log(marc.age > 18 ? "Bravo tu es majeur" : "Tu es mineur")
+
+    </script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
