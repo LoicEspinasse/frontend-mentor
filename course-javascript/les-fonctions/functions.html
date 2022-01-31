@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="_functions.js"></script>
+
+    <script>
+        var classeA = [{
+            nom: 'Marc',
+            moyenne: 15
+        }, {
+            nom: 'Marion',
+            moyenne: 8
+        }, {
+            nom: 'Antoine',
+            moyenne: 4
+        }]
+
+        var classeB = [{
+            nom: 'Pierre',
+            moyenne: 11
+        }, {
+            nom: 'Thomas',
+            moyenne: 9
+        }, {
+            nom: 'Arthur',
+            moyenne: 12
+        }]
+
+        function eleveMoyenne(classe) {
+            for (var i = 0; i < classe.lenght; i++) {
+                var eleve = classe[i]
+                if (eleve.moyenne >= 10) {
+                    console.log(eleve.nom + " à la moyenne")
+                }
+            }
+        }
+
+        eleveMoyenne(classeA)
+        eleveMoyenne(classeB)
+
+        var sentence = "Le premier point auquel il faut faire attention est le choix de la propriété à modifier pour un élément HTML. Toutes les propriétés n'ont pas le même impact lors du rendu de la page. Par exemple, si on modifie la propriété."
+
+        /*
+        ON SEPARE NOTRE PHRASE GRACE AUX ESPACES (split)
+        ON CREE UN COMPTEUR
+        POUR CHAQUE MOTS 
+             SI LE MOT EST DANS MON COMPTEUR (compteur[mot])
+                JE L'INCREMENTE
+            SINON
+                JE LUI ASSIGNE LA VALEUR 
+        AFFICHE LE COMPTEUR (console.log)
+        */
+
+
+        var countWords = function (sentence) {
+            var words = sentence.toLowerCase().split(" ")
+            var counter = {}
+            for (var i = 0; i < words.length; i++) {
+                var word = words[i]
+                if (counter[word] === undefined) {
+                    counter[word] = 1
+                } else {
+                    counter[word]++
+                }
+            }
+            return (counter)
+        }
+
+        // Exercice 2 
+        var student1 = {
+            nom: 'Jean',
+            notes: [15, 16, 18]
+        }
+        var student2 = {
+            nom: 'Marc',
+            notes: [5, 18, 20]
+        }
+
+        var studentMoy = function (notes) {
+            var sum = 0
+            for (var i = 0; i < notes.lenght; i++) {
+                sum = sum + notes[i]
+            }
+            return sum / notes.lenght
+        }
+
+    </script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
