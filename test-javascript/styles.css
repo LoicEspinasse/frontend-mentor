@@ -1,0 +1,99 @@
+body {
+    min-height: 100vh;
+    background-color: #1b1b1c;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.btn {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hidden {
+    background-color: red;
+    color: white;
+}
+
+.hidden:hover {
+    background-color: antiquewhite;
+    transition: 0.5s;
+    color: red;
+}
+
+.discover {
+    background-color: green;
+    color: white;
+}
+
+.discover:hover {
+    background-color: antiquewhite;
+    transition: 0.5s;
+    color: green;
+}
+
+.text {
+    color: white;
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.mouseEvent {
+    padding: 25px;
+    border: 5px solid white;
+    width: 220px;
+    /**position: absolute;**/
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    cursor: pointer;
+}
+
+.inputEvent {
+    margin-top: 50px;
+    color: white;
+}
+
+button.theme {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#darkTheme {
+    background: black;
+    color: white;
+}
+
+#yellowTheme {
+    background: yellow;
+    color: black;
+}
+
+#salmonTheme {
+    background: salmon;
+    color: bisque;
+}
+
+.darkTheme {
+    background: black;
+    color: white;
+}
+
+.yellowTheme {
+    background: yellow;
+    color: black;
+}
+
+.salmonTheme {
+    background: salmon;
+    color: bisque;
+}

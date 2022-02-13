@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>test JavaScript</title>
+</head>
+
+<body>
+
+    <div class="selector">
+        <button class="btn" id="btn-discover">Decouvrir</button>
+        <button class="btn" id="btn-hidden">Cacher</button>
+        <button class="btn" id="btn-toggle"> Toggle</button>
+    </div>
+
+    <div class="text" id="text">
+        <p> Bravo vous avez reussi !</p>
+    </div>
+
+    <div class="mouseEvent">
+        <div> Horizontal : <span id="horizontal">0</span> </div>
+        <div>Vertical : <soan id="vertical">0</soan>
+        </div>
+    </div>
+
+    <div class="inputEvent">
+        <label for="input"> Comment ça va aujourd'hui ? </label>
+        <input type="text" id="input">
+        <div class="result"></div>
+    </div>
+
+    <div class="themeContainer">
+        <button class="theme" id="themeDark"> Dark</button>
+        <button class="theme" id="themeSalmon">Salmon</button>
+        <button class="theme" id="themeGreen">Yellow</button>
+    </div>
+
+
+
+    <script>
+        const btnDiscover = document.getElementById('btn-discover')
+        const btnHidden = document.querySelector('#btn-hidden')
+        const btnToggle = document.getElementById('btn-toggle')
+        const text = document.getElementsByClassName('text')[0]
+
+        // event click ---------------------------------------------------
+        btnDiscover.addEventListener('click', function () {
+            text.classList.add('show')
+        })
+
+        btnHidden.addEventListener('click', () => {
+            text.classList.remove('show')
+        })
+
+        btnToggle.addEventListener('click', () => text.classList.toggle('show'))
+
+        // Event Mouse ---------------------------------------------------
+        const mouseEvent = document.querySelector('.mouseEvent')
+        const horizontal = document.getElementById('horizontal')
+        const vertical = document.getElementById('vertical')
+
+        mouseEvent.addEventListener('mousemove', (e) => {
+            horizontal.innerHTML = e.clientX
+            vertical.innerHTML = e.clientY
+            mouseEvent.style.left = e.clientX / window.innerWidth * 100 + "%"
+
+            if (e.clientX > 500) {
+                document.body.style.filter = "blur(3px)"
+            } else {
+                document.body.style.filter = "none"
+            }
+        })
+
+        // Event Input -------------------------------------------------
+
+        document.getElementById('input').addEventListener('input', (e) => {
+            console.log(e.target.value);
+        })
+
+        // Add theme colors
+
+        const theme = document.querySelectorAll('.theme')
+
+        theme.forEach((item) => {
+            item.addEventListener('click', (e) => {
+                switch (e.target.id) {
+                    case "dark":
+                        document.body.classList.add("darktheme")
+                }
+            })
+        });
+
+    </script>
+
+</body>
+
+</html>
